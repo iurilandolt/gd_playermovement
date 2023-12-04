@@ -10,9 +10,19 @@ Avoiding having to check for user input on every frame so here is an approach th
 
 In the physics/process function we will be applying a costant force to the object in axis, X Y & Z.
 
-The applied force will always be 0 in any direction.
+The applied force will always be 0 in any direction:
+
+`apply_central_force(align_force * m_input *  1200.0 * delta)`
 
 The value of the applied force on each axis will be changed by the events/signals recieved from the user.
+
+This script also includes an horizontal rotation function for a camera object '$TwistPivot'.
+
+The force applied forward will always match with the direction the camera is facing:
+
+`	view_pos = $TwistPivot
+	align_force = view_pos.basis`
+
 
 
 
