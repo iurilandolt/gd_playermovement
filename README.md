@@ -20,8 +20,8 @@ This script also includes an horizontal rotation function for a camera object '$
 
 The force applied forward will always match with the direction the camera is facing:
 
-`	view_pos = $TwistPivot
-	align_force = view_pos.basis`
+`view_pos = $TwistPivot
+align_force = view_pos.basis`
 
 
 
