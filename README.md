@@ -16,6 +16,13 @@ The applied force will always be 0 in any direction:
 
 The value of the applied force on each axis will be changed by the events/signals recieved from the user.
 
+eg. 
+
+    if event.is_action_pressed("move_left") || event.is_action_pressed("move_right"):
+  		m_input.x = Input.get_axis("move_left", "move_right")
+  	if event.is_action_released("move_left") || event.is_action_released("move_right"):
+  		m_input.x = Input.get_axis("move_left", "move_right")
+
 This script also includes an horizontal rotation function for a camera object '$TwistPivot'.
 
 The force applied forward will always match with the direction the camera is facing:
